@@ -10,7 +10,7 @@ export class RoomController {
 
   @Get('all')
   async findAll(){
-    
+    return this.roomService.getAllRooms();
   }
 
   // get one room by :id
@@ -26,7 +26,7 @@ export class RoomController {
   async create(
     @Body() room: {name: string; description: string}
   ){
-
+    return this.roomService.createRoom(room);
   }
 
   // delete room 
